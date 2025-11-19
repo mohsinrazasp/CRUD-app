@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Task List</title>
+</head>
+<body>
+    <h1>My Task List</h1>
+    
+    <a href="/add">Add New Task</a>
+    
+    <hr>
+    
+    {% if tasks %}
+        <ul>
+            {% for task in tasks %}
+                <li>
+                    {{ task }}
+                    <a href="/delete/{{ loop.index0 }}">Delete</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No tasks yet. Add your first task!</p>
+    {% endif %}
+</body>
+</html>
