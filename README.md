@@ -4,9 +4,3 @@
 
 Today we created create functionality.
 
-
-read,
-
-update,
-
-delete
