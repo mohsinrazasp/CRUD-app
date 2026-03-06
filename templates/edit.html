@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit Task</title>
+</head>
+<body>
+
+  <h1>Edit Task #{{ task['id'] }}</h1>
+
+  <form action="/edit/{{ task['id'] }}" method="POST">
+
+    <label>Task title:</label>
+    <br>
+
+    <input type="text" name="title" value="{{ task['title'] }}" required>
+
+    <br><br>
+
+    <label>
+      {% if task['done'] == 1 %}
+        <input type="checkbox" name="done" checked>
+      {% else %}
+        <input type="checkbox" name="done">
+      {% endif %}
+      Mark as done
+    </label>
+
+    <br><br>
+
+    <input type="submit" value="Save Changes">
+
+  </form>
+
+  <br>
+  <a href="/">Back to task list</a>
+
+</body>
+</html>
