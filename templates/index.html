@@ -29,7 +29,7 @@
         <td>{{ task['title'] }}</td>
 
         <td>
-          {% if task['done'] == 1 %}
+          {% if task['done'] == true %}
             Done
           {% else %}
             Pending
@@ -38,7 +38,7 @@
 
         <td>
 
-          {% if task['done'] == 1 %}
+          {% if task['done'] == true %}
             <a href="/toggle/{{ task['id'] }}">Undo</a>
           {% else %}
             <a href="/toggle/{{ task['id'] }}">Mark Done</a>
